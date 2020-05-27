@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>My Skill Tree</title>
 </head>
 <body>
     <h1>My Skill Tree</h1>
-    <button id="btn-clear" class="btn btn-danger">Clear Skill Tree</button>
+    <button id="btn-clear" class="btn btn-danger" style="margin: 25px 0;">Clear Skill Tree</button>
 
+    <p>Start by adding some skills!</p>
     <div class="container skills-container" style="margin-top: 50px;">
-
-        <br />
-        <button class="btn btn-primary perm" id="btn-add"> + Add New Skill</button>
+        <button class="btn btn-primary perm" id="btn-add" style="margin-right: 25px;"> + Add New Skill</button>
         <input  class="perm" id="txt-skill" type="text">
     </div>
 
@@ -24,7 +25,11 @@
 
 
 
-
+    <footer class="footer">
+        <div class="container">
+            Copyright Martin Gras 2020
+        </div>
+    </footer>
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

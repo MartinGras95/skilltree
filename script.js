@@ -1,5 +1,13 @@
 $(document).ready(function () {
 
+    // First iterate through localstorage 
+    var arrayOfKeys = Object.keys(localStorage);
+    console.log(arrayOfKeys);
+    // display each skill from localStorage
+    arrayOfKeys.forEach(element => {
+        $(".skills-container").prepend("<div class="+`"row"`+">"+ "<div class="+`"col"`+">"+"<h3>"+element+"</h3>" + "<button class="+`"btn btn-primary btn-learned"`+">Complete</button>"+"<button class="+`"btn btn-danger btn-delete"`+">Delete</button>"+"</div>"+"</div>");
+    });
+        
     // add new skill
     $("#btn-add").click(function (e) { 
         e.preventDefault();
@@ -24,7 +32,7 @@ $(document).ready(function () {
     $(".skills-container").on('click','.btn-learned',function (e) { 
         e.preventDefault();
         var value = $(this).siblings("h3").text().toLowerCase();
-        $(this).siblings("h3").css("color","red");
+        $(this).parent().css("background-color","#70ff7a");
         localStorage.setItem(value,true);
 
     });

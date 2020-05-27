@@ -1,0 +1,20 @@
+html,body{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.skills-container{
+    height: 100vh;
+}
+
+.col{
+    margin: 10px 0;
+    border-radius: 15px;
+}
+
+
+
+
+
