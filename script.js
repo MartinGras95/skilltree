@@ -2,11 +2,31 @@ $(document).ready(function () {
 
     // First iterate through localstorage 
     var arrayOfKeys = Object.keys(localStorage);
-    console.log(arrayOfKeys);
-    // display each skill from localStorage
-    arrayOfKeys.forEach(element => {
-        $(".skills-container").prepend("<div class="+`"row"`+">"+ "<div class="+`"col"`+">"+"<h3>"+element+"</h3>" + "<button class="+`"btn btn-primary btn-learned"`+">Complete</button>"+"<button class="+`"btn btn-danger btn-delete"`+">Delete</button>"+"</div>"+"</div>");
-    });
+
+
+    
+    for (var i = 0; i < localStorage.length; i++){
+        // current skill in iteration
+        var currentSkill = arrayOfKeys[i];
+
+        // background will vary depending on if skill is set to true or not
+        var background = "";
+
+        // if the skill is true give green background green
+        // else keep transparent
+        if(localStorage.getItem(currentSkill) == "true"){
+            background = "#70ff7a"
+        }else{
+            background= "transparent"
+        }
+
+        // this line is so messy i know
+        // this adds the each skill to the page
+        $(".skills-container").prepend("<div class="+`"row"`+">"+ "<div class="+`"col" style="background-color:`+background+`"` +">"+"<h3>"+currentSkill+"</h3>" + "<button class="+`"btn btn-primary btn-learned"`+">Complete</button>"+"<button class="+`"btn btn-danger btn-delete"`+">Delete</button>"+"</div>"+"</div>");
+        
+    }
+
+
         
     // add new skill
     $("#btn-add").click(function (e) { 
@@ -34,7 +54,6 @@ $(document).ready(function () {
         var value = $(this).siblings("h3").text().toLowerCase();
         $(this).parent().css("background-color","#70ff7a");
         localStorage.setItem(value,true);
-
     });
 
     // delete skill

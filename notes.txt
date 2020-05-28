@@ -1,0 +1,11 @@
+skill tree website serves as a way of keeping track of what skills a person has learned.
+As of now a user is able to add skills to the tree, mark them as complete and delete them.
+a feature that must be added is to be able to toggle between complete and uncomplete.
+
+The data from the website persists using local storage.
+A feature that should be added is a notification which lets the user know that data is stored on their local machine.
+
+Future improvements:
+A way of branching from skills. 
+For example: Branch JavaScript -> React 
+The branches would be placed horizontally to the parent skill
